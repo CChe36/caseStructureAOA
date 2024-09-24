@@ -1,0 +1,19 @@
+type            surfaceFieldValue;
+libs            (fieldFunctionObjects);
+regionType      faceZone;
+name            outlet90;
+operation       average;
+writeFields	no;
+
+executeControl      adjustable;
+
+executeInterval     1e-6;
+
+writeControl        adjustable;
+
+writeInterval       1e-6;
+
+fields
+(
+    isentropic(p)
+);

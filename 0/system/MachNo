@@ -1,0 +1,17 @@
+    // Mandatory entries (unmodifiable)
+
+    type            MachNo;
+
+    libs            (fieldFunctionObjects);
+
+
+    // Mandatory entries (runtime modifiable)
+
+    executeControl      writeTime;
+
+    executeInterval     1;
+
+    writeControl        writeTime;
+
+    writeInterval       1;
+

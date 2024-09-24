@@ -1,0 +1,88 @@
+
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2306                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     rhoCentralFoam;
+
+startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         .1;
+
+deltaT          5e-9;
+
+writeControl    adjustable;
+
+writeInterval   1e-6;
+
+purgeWrite      5;
+
+writeFormat     ascii;
+
+writePrecision  9;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+graphFormat     raw;
+
+runTimeModifiable true;
+
+adjustTimeStep  yes;
+
+maxCo           0.5;
+
+maxDeltaT       .0025;
+
+functions
+{
+    #includeFunc "yPlus"
+    #includeFunc "MachNo"
+
+    #includeFunc "probe0"
+    #includeFunc "probe1"
+    #includeFunc "probe2"
+    #includeFunc "probe3"
+    #includeFunc "probe4"
+    #includeFunc "probe90"
+    
+    #includeFunc "bottomSurfacePres"
+    #includeFunc "cowlSurfacePres"
+
+    #includeFunc "inlet52MFR"
+    #includeFunc "outlet90MFR"
+
+    #includeFunc "inlet52Avg"
+    #includeFunc "outlet90Avg"
+
+    #includeFunc "outlet90Max"
+    #includeFunc "outlet90Min"
+
+    #includeFunc "pressureIsentropic"
+
+    #includeFunc "inletIsentropicAvg"
+    #includeFunc "inlet52IsentropicAvg"
+    #includeFunc "outlet90IsentropicAvg"
+}
+
+
+// ************************************************************************* //
