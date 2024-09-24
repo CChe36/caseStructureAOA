@@ -1,0 +1,22 @@
+libs            (sampling);
+type            probes;
+
+
+executeControl      adjustable;
+
+executeInterval     1e-6;
+
+writeControl        adjustable;
+
+writeInterval       1e-6;
+
+
+fields
+(
+    p
+);
+
+probeLocations
+(
+    (0.03525 .00348 0) // 0.27 x/L
+);

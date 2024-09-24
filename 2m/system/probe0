@@ -1,0 +1,22 @@
+libs            (sampling);
+type            probes;
+
+
+executeControl      adjustable;
+
+executeInterval     1e-6;
+
+writeControl        adjustable;
+
+writeInterval       1e-6;
+
+
+fields
+(
+    p
+);
+
+probeLocations
+(
+    (0.02475 0.0013 0) // pressure tap locations 0.13 x/L
+);
