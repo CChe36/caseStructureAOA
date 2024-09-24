@@ -1,0 +1,19 @@
+    // Mandatory entries (unmodifiable)
+
+    type            pressure;
+
+    libs            (fieldFunctionObjects);
+
+
+    // Mandatory entries (runtime modifiable)
+
+    mode            isentropic;
+
+    executeControl      writeTime;
+
+    executeInterval     1;
+
+    writeControl        writeTime;
+
+    writeInterval       1;
+
