@@ -29,9 +29,11 @@ deltaT          5e-9;
 
 writeControl    adjustable;
 
-writeInterval   1e-6;
+writeInterval   1e-6; // changed to 1e-3 for visual representations
 
-purgeWrite      5;
+// need to update some function objects to write to 1e-3 as well, can't write isentopic(p) when its not written to folder
+
+purgeWrite      5; // for visual representations, change to 45 to see ~3 buzz cycles for higher freq, kept low for storage management
 
 writeFormat     ascii;
 
