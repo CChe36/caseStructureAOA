@@ -45,7 +45,7 @@ boundaryField
 
     /*outlet1
     {
-        type            waveTransmissive;
+        type            waveTransmissive; // used for just the open exit case
 	gamma		1.4;
     }*/
 
